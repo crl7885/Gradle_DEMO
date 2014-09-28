@@ -1,0 +1,2 @@
+include ':MainActivity'
+include ':appcompat_v7'
