@@ -6,15 +6,17 @@ buildscript {
         classpath 'com.android.tools.build:gradle:0.13.2+'
     }
 }
-apply plugin: 'android-library'
+
+apply plugin: 'android'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
+    compile project(':appcompat_v7')
 }
 
 android {
     compileSdkVersion 20
-    buildToolsVersion "19.1.0"
+   buildToolsVersion "19.1.0"
 
     sourceSets {
         main {
@@ -26,7 +28,13 @@ android {
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
         }
-
+		
+		android {
+	    	lintOptions {
+	    	    abortOnError false
+	   		 	}
+		}
+		
         // Move the tests to tests/java, tests/res, etc...
         instrumentTest.setRoot('tests')
 

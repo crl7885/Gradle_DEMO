@@ -16,7 +16,7 @@ dependencies {
 
 android {
     compileSdkVersion 20
-    buildToolsVersion "20.0.0"
+   	buildToolsVersion "19.1.0"
 
     sourceSets {
         main {
